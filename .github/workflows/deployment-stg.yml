@@ -41,7 +41,7 @@ jobs:
       - name: Build website
         id: build-website
         run: npm run build
-        
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -56,7 +56,7 @@ jobs:
           SLACK_TITLE: Deploy Success
           SLACK_COLOR: good
           SLACK_MESSAGE: ':material_check: Deployment STEEL-SERYY STG '
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }} # required
 
       - name: Slack Notification deploy Failure
         if: ${{ failure() }}
@@ -65,4 +65,4 @@ jobs:
           SLACK_TITLE: Deploy Failure
           SLACK_COLOR: danger
           SLACK_MESSAGE: ':warning: Deployment STEEL-SERYY STG '
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }} # required
