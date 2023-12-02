@@ -1,9 +1,6 @@
 name: Deployment STG
 
 on:
-  push:
-    branches:
-      - staging
   pull_request:
     branches:
       - staging
