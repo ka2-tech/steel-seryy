@@ -55,7 +55,7 @@ jobs:
         env:
           SLACK_TITLE: Deploy Success
           SLACK_COLOR: good
-          SLACK_MESSAGE: ':material_check: Deployment STEEL-SERYY STG '
+          SLACK_MESSAGE: 'Deployment STEEL-SERYY STG :rocket:'
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }} # required
 
       - name: Slack Notification deploy Failure
@@ -64,5 +64,5 @@ jobs:
         env:
           SLACK_TITLE: Deploy Failure
           SLACK_COLOR: danger
-          SLACK_MESSAGE: ':warning: Deployment STEEL-SERYY STG '
+          SLACK_MESSAGE: 'Deployment STEEL-SERYY STG :skull:'
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }} # required
